@@ -1,0 +1,105 @@
+/* ===========================
+   GLOBAL RESET + BASIC STYLING
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    position: relative;
+    padding: 20px;
+}
+
+/* ========================================
+   BACKGROUND IMAGE USING BODY::BEFORE
+   (REQUIRED FOR FULL POINTS)
+   ======================================== */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.jpg'); /* replace with your image file */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25; /* transparency for readability */
+    z-index: -1;
+}
+
+/* ===========================
+   HEADER / PHOTO AREA
+   =========================== */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 20px; /* rounded corners */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+header img.icon {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; /* rounded photo */
+    margin: 10px 0;
+    border: 4px solid #ffffff;
+}
+
+header a {
+    display: block;
+    margin: 5px 0;
+    font-size: 1.1rem;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+/* ===========================
+   UNIVERSAL SECTION STYLING
+   =========================== */
+section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 15px; /* rounded corners */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #0066cc;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+/* ===========================
+   LISTS
+   =========================== */
+ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* ===========================
+   FOOTER
+   =========================== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: white;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
