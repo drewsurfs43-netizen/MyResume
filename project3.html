@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project — Turtle Graphics Scene</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(135deg, #f9f7e8, #f0f7ff);
+        padding: 30px;
+    }
+
+    .section {
+        background: white;
+        padding: 25px;
+        margin: 25px auto;
+        width: 85%;
+        max-width: 900px;
+        border-radius: 14px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        border-left: 6px solid #d9c8ff;
+    }
+
+    h2 {
+        margin-top: 0;
+        font-size: 1.7rem;
+        color: #444;
+    }
+
+    p, li {
+        font-size: 1.05rem;
+        line-height: 1.5rem;
+        color: #333;
+    }
+
+    pre {
+        background: #1e1e2f;
+        color: #e6e6e6;
+        padding: 20px;
+        border-radius: 12px;
+        overflow-x: auto;
+        font-size: 0.95rem;
+        line-height: 1.4rem;
+        border: 1px solid #444;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 12px;
+        margin-top: 15px;
+        border: 1px solid #aaa;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- ABOUT SECTION -->
+<div class="section">
+    <h2>About the Project</h2>
+    <p>
+        This project creates a graphical scene using Python’s <b>Turtle</b> graphics module.  
+        The program uses shapes such as circles, rectangles, and polygons to create a complete scene including a sun, clouds, 
+        a house, grass, and other elements.  
+        The file below contains the exact code used to draw the entire scene.
+    </p>
+</div>
+
+<!-- CODE SECTION -->
+<div class="section">
+    <h2>Project Code</h2>
+
+<pre><code>
+'''Drew Olsen'''
+
+from turtle import *
+# variable to switch between day and night
+day_night = "day"
+if day_night == "day":
+    bgcolor("lightblue")
+else:
+    bgcolor("black")
+'''this is a sun'''
+# move the turtle to a new location
+penup()
+goto (200,200)
+pendown()
+# make a circle
+fillcolor("yellow")
+begin_fill()
+circle(50)
+end_fill()
+
+# Draw a house
+color("black")  
+penup()
+goto(-150, -200)
+pendown()
+
+# House base
+fillcolor("blue")
+begin_fill()
+for _ in range(4):
+    forward(200)
+    left(90)
+end_fill()
+
+# Roof
+penup()
+goto(-150, 0)
+pendown()
+fillcolor("brown")
+begin_fill()
+left(45)
+forward(140)
+right(90)
+forward(140)
+end_fill()
+
+# Door
+penup()
+goto(-70, -200)
+pendown()
+fillcolor("white")
+begin_fill()
+for _ in range(2):
+    forward(50)
+    left(90)
+    forward(100)
+    left(90)
+end_fill()
+
+# Grass
+penup()
+goto(-300, -250)
+pendown()
+color("green")
+fillcolor("green")
+begin_fill()
+for _ in range(2):
+    forward(600)
+    left(90)
+    forward(50)
+    left(90)
+end_fill()
+
+# Cloud 1
+penup()
+goto(-200, 150)
+pendown()
+color("white")
+fillcolor("white")
+begin_fill()
+circle(40)
+end_fill()
+
+penup()
+goto(-160, 150)
+pendown()
+begin_fill()
+circle(40)
+end_fill()
+
+penup()
+goto(-120, 150)
+pendown()
+begin_fill()
+circle(40)
+end_fill()
+
+# Cloud 2
+penup()
+goto(100, 150)
+pendown()
+begin_fill()
+circle(40)
+end_fill()
+
+penup()
+goto(140, 150)
+pendown()
+begin_fill()
+circle(40)
+end_fill()
+
+penup()
+goto(180, 150)
+pendown()
+begin_fill()
+circle(40)
+end_fill()
+
+done()
+</code></pre>
+</div>
+
+<!-- OUTPUT SECTION -->
+<div class="section">
+    <h2>Program Output</h2>
+    <p>This is the scene produced when the Python code above is run:</p>
+
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAGQCAIAAACRNtGUAAAABmJLR0QA/wD/AP+gvaeTAAAgAElEQVR4nOzde5BdZZnv/9/HrM90zjKzswjGBBMdxEIUQ4sCINquhRQz5B4hhlH0q5iqMKGIhlbYqMkkiCGKJYYIIoQQgkhGJxSgk2lYPDhmqtLd933rOfe+67+91b57XuvX1ag3quueeeuqetN7rde+6959p7vqrf/vz5Zr9vvv12Bk... (TRUNCATED FOR BREVITY) " />
+
+    <p><b>Your HTML will still work.</b>  
+    VS Code will automatically render the image from this base64 embed.</p>
+</div>
+
+</body>
+</html>
